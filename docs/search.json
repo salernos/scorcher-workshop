@@ -51,9 +51,12 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Website Name",
+    "title": "scorcher",
     "section": "",
-    "text": "Banner text!\n\n\nAbout\nThis website was created with the OTTR_Quarto website template.\nThis enables simpler creation of websites that have automated checks for broken URLs and spelling errors, as well as automated rendering of all html files. No need to worry about git conflicts for html files! See ottrproject.org for more docs and details.\nHere is how you can include images in your website pages (this one is saved in resources/images to keep things tidy:\n\n\n\n\n\n\n\n\n\nWe will go through the following:\n\nHow to set up your repository to enable the GitHub actions of the template. (Setup tab)\nHow to host your website using GitHub (Hosting tab)\nHow to modify your website structure (Structure tab)\nHow to change your website style (Style tab)\nMore information about GitHub Actions (Git Actions tab)\n\nClick on each tab to learn more."
+    "text": "Source: https://arxiv.org/pdf/2411.19908\n\n\n\n\n\nLearning Goals:\n\nUnderstand limitations in using predicted data for inference.\nLearn about methods that correct for bias and recover valid uncertainty estimates.\nGain practical skills using the ipd R package.\n\nLearning Objectives:\n\nExplore data with AI/ML-predicted outcomes and diagnose bias/variance in predictions.\nApply ipd::ipd() to continuous and binary outcomes.\nInterpret prediction-based (PB) inference outputs and visualize model results.\n\n\n\n\n\n\n\n\nActivity\nTime\n\n\n\n\nOverview\n30 m\n\n\nShort Break\n5 m\n\n\nUnit 00: Getting Started\n30 m\n\n\nUnit 01: AlphaFold\n30 m\n\n\nWrap-Up and Q&A\n10 m\n\n\n\n\n\n\nThe companion website for this workshop is available at:\nhttps://salernos.github.io/ipd-workshop\nTo use the workshop image:\ndocker run -e PASSWORD=&lt;your_chosen_password&gt; -p 8787:8787 ghcr.io/salernos/scorcher-workshop:latest\nOnce running, open http://localhost:8787/ and login with username = rstudio, password = &lt;your_chosen_password&gt;\nThen begin!\n\n\n\nIn this workshop, we explore the consequences of conducting inference on predicted data across several applications and present a suite of prediction-based (PB) inference methods that adjust for prediction-related uncertainty to improve inference validity and efficiency. We also introduce ipd, a user-friendly R package that implements the PB inference methods through a unified interface. The package supports modular integration into existing workflows and includes tidy methods for model inspection and diagnostics.\n\n\n\nThis workshop covers two modules, each illustrated with the ipd package:1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nWe have also included some supplemental modules for you to explore on your own:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nThis workshop uses a blended format of instruction and hands-on coding exercises. Participants should:\n\nFollow along in the virtual RStudio environment (see below).\nAttempt to complete brief exercises or run the solution code snippets in real time.\nEngage in Q&A at module boundaries to troubleshoot and discuss concepts.\n\n\n\n\n\nA computer with internet access.\nFamiliarity with base R and tidyverse syntax (e.g., dplyr, broom).\nBasic understanding of predictive (e.g., randomForest) and regression modeling (e.g., lm, glm).\nOptional: Exposure to Bioconductor’s ExpressionSet, AnnotationDbi, and MLInterfaces is helpful for one of the supplemental modules.\n\n\n\n\nPresenters: Jesse Gronsbell ✉︎, Jianhui Gao ✉︎, Stephen Salerno ✉︎\nAll Contributors (Alphabetical Order): Awan Afiaz ✉︎, David Cheng ✉︎, Jianhui Gao ✉︎, Jesse Gronsbell ✉︎, Kentaro Hoffman ✉︎, Jeff Leek ✉︎, Qiongshi Lu ✉︎, Tyler McCormick ✉︎, Jiacheng Miao ✉︎, Anna Neufeld ✉︎, Stephen Salerno ✉︎",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "git_actions.html",
@@ -124,5 +127,85 @@
     "title": "Style",
     "section": "Additional changes",
     "text": "Additional changes\nTo make additional changes to the style, you can modify the styles.css file with css code. This website has great information about css code.\nAs an example if you wanted to change the color of the blue line to green you could change where it says lightblue to lightgreen in the styles.css file. You can also use a hex color code like those that can be found at this website, such as #00FF9E to get a specific shade.\n\n\n\n\n\n\n\n\n\nNote that if you change the css file with a new element that is not already defined like body then you would need to do it as done with the banner element. This was then added to the index.Rmd file by using:\n&lt;div class = \"banner\"&gt;\nBanner text!  \n&lt;/div&gt;\nAlso checkout the Quarto docs for more customization of the pages."
+  },
+  {
+    "objectID": "index.html#quick-start",
+    "href": "index.html#quick-start",
+    "title": "scorcher",
+    "section": "",
+    "text": "The companion website for this workshop is available at:\nhttps://salernos.github.io/ipd-workshop\nTo use the workshop image:\ndocker run -e PASSWORD=&lt;your_chosen_password&gt; -p 8787:8787 ghcr.io/salernos/scorcher-workshop:latest\nOnce running, open http://localhost:8787/ and login with username = rstudio, password = &lt;your_chosen_password&gt;\nThen begin!",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-overview",
+    "href": "index.html#workshop-overview",
+    "title": "scorcher",
+    "section": "",
+    "text": "In this workshop, we explore the consequences of conducting inference on predicted data across several applications and present a suite of prediction-based (PB) inference methods that adjust for prediction-related uncertainty to improve inference validity and efficiency. We also introduce ipd, a user-friendly R package that implements the PB inference methods through a unified interface. The package supports modular integration into existing workflows and includes tidy methods for model inspection and diagnostics.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#modules",
+    "href": "index.html#modules",
+    "title": "scorcher",
+    "section": "",
+    "text": "This workshop covers two modules, each illustrated with the ipd package:1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#supplemental-modules",
+    "href": "index.html#supplemental-modules",
+    "title": "scorcher",
+    "section": "",
+    "text": "We have also included some supplemental modules for you to explore on your own:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#participation",
+    "href": "index.html#participation",
+    "title": "scorcher",
+    "section": "",
+    "text": "This workshop uses a blended format of instruction and hands-on coding exercises. Participants should:\n\nFollow along in the virtual RStudio environment (see below).\nAttempt to complete brief exercises or run the solution code snippets in real time.\nEngage in Q&A at module boundaries to troubleshoot and discuss concepts.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "scorcher",
+    "section": "",
+    "text": "A computer with internet access.\nFamiliarity with base R and tidyverse syntax (e.g., dplyr, broom).\nBasic understanding of predictive (e.g., randomForest) and regression modeling (e.g., lm, glm).\nOptional: Exposure to Bioconductor’s ExpressionSet, AnnotationDbi, and MLInterfaces is helpful for one of the supplemental modules.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "scorcher",
+    "section": "",
+    "text": "Presenters: Jesse Gronsbell ✉︎, Jianhui Gao ✉︎, Stephen Salerno ✉︎\nAll Contributors (Alphabetical Order): Awan Afiaz ✉︎, David Cheng ✉︎, Jianhui Gao ✉︎, Jesse Gronsbell ✉︎, Kentaro Hoffman ✉︎, Jeff Leek ✉︎, Qiongshi Lu ✉︎, Tyler McCormick ✉︎, Jiacheng Miao ✉︎, Anna Neufeld ✉︎, Stephen Salerno ✉︎",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "scorcher",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nModule card cover images were generated by GPT-5.5.↩︎",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]

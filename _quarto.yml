@@ -1,29 +1,89 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "content/images/**"
   
 website:
-  title: "OTTR Template Website"
-  navbar:
-    left:
-    - text: ""
-      href: index.qmd
-      icon: fa-home
-    - text: 1. Setup
-      href: setup.qmd
-    - text: 2. Hosting
-      href: hosting.qmd
-    - text: Editing
-      href: editing.qmd
-    - text: 3. Style
-      href: style.qmd
-    - text: 4. Git Actions
-      href: git_actions.qmd
-    - text: More ottr docs
-      href: https://www.ottrproject.org/
-
+  page-navigation: true
+  title: "Getting Started with Scorcher"
+  description: "Workshop Materials for Scorcher"
+  site-url: "https://salernos.github.io/scorcher-workshop/"
+  repo-url: "https://github.com/salernos/scorcher-workshop/"
+  repo-actions: [edit, issue]
+  
+  open-graph: true
+  
+  page-footer:
+    right: "Proudly built with [OTTR](https://www.ottrproject.org/) and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2026, Stephen Salerno"
+    background: "#F4F4F4"
+    
+    
+#################################### HERE ######################################
+  
+  sidebar:
+    logo: "content/images/scorcher.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: moon
+        href: javascript:window.quartoToggleColorScheme();
+        text: "Toggle Dark Mode"
+      - icon: github
+        href: https://github.com/ipd-tools
+        text: "GitHub Organization"
+      - icon: code-square
+        href: https://github.com/salernos/ipd-workshop
+        text: "Source Code"
+      - icon: person-fill
+        text: "Presenter"
+        menu:
+          - text: Stephen Salerno, PhD
+            url: https://salernos.github.io/
+          
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - section: "Resources"
+        contents:
+          - text: "Setup & Prerequisites"
+            href: content/setup.qmd
+          - text: "Additional Information"
+            href: content/information.qmd
+      - text: "Overview"
+        href: content/slides.qmd
+      - section: "Modules"
+        contents:
+          - text: "Getting Started"
+            href: content/Unit00_GettingStarted.qmd
+          - text: "Prediction: Palmer Penguins"
+            href: content/Unit01_PalmerPenguins.qmd
+      - section: "Supplemental Modules"
+        contents:
+          - text: "Classification: MNIST"
+            href: content/Unit02_MNIST.qmd
+          - text: "Classification: CIFAR10"
+            href: content/Unit03_CIFAR10.qmd
+          - text: "Diffusion: Datasaurus Dozen"
+            href: content/Unit04_TinyDiffusion.qmd
+            
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      light: cosmo
+      dark: darkly
+    css:
+      - styles.css
+    include-after-body: resources/theme-toggle-icon.html
+    code-copy: true
+    code-overflow: wrap
     toc: true
+    toc-location: right
+
+freeze: auto
+
+editor: source

@@ -1,0 +1,12 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/content/Unit00_GettingStarted.html",
+      "/content/Unit01_PalmerPenguins.html",
+      "/content/Unit02_MNIST.html",
+      "/content/Unit03_CIFAR10.html",
+      "/content/Unit04_TinyDiffusion.html"
+    ]
+  }
+]

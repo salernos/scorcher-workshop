@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Stephen Salerno, PhD">
 
-<title>scorcher – Getting Started with Scorcher</title>
+<title>Unit02_MNIST – Getting Started with Scorcher</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,67 +23,29 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./content/setup.qmd" rel="next">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d29afafe85acf55e028e88876f043bb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5afb2dd72a79eeb1a193c57ab8f86b78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d29afafe85acf55e028e88876f043bb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d29afafe85acf55e028e88876f043bb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5afb2dd72a79eeb1a193c57ab8f86b78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d29afafe85acf55e028e88876f043bb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,98 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-core_units .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-core_units'] = new List('listing-core_units', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-supplemental_units .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-supplemental_units'] = new List('listing-supplemental_units', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="scorcher – Getting Started with Scorcher">
-<meta property="og:description" content="Blazing a trail for effortless model building with torch in R">
-<meta property="og:image" content="https://salernos.github.io/scorcher-workshop/content/images/pbinference_gronsbell.PNG">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Unit02_MNIST – Getting Started with Scorcher">
 <meta property="og:site_name" content="Getting Started with Scorcher">
 </head>
 
@@ -378,7 +251,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Unit02_MNIST</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -392,9 +265,9 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./content/images/scorcher.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./content/images/scorcher.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../content/images/scorcher.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../content/images/scorcher.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="javascript:window.quartoToggleColorScheme();" title="Toggle Dark Mode" class="quarto-navigation-tool px-1" aria-label="Toggle Dark Mode"><i class="bi bi-moon"></i></a>
@@ -422,7 +295,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -437,13 +310,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/setup.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../content/setup.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup &amp; Prerequisites</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/information.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../content/information.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Information</span></a>
   </div>
 </li>
@@ -451,7 +324,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/slides.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../content/slides.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -466,14 +339,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Unit00_GettingStarted.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/Unit00_GettingStarted.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting Started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Unit01_PalmerPenguins.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Prediction: Palmer Penguins</span></a>
+  <a href="../content/Unit01_AlphaFold.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proteomics with AlphaFold</span></a>
   </div>
 </li>
       </ul>
@@ -489,20 +362,26 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Unit02_MNIST.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classification: MNIST</span></a>
+  <a href="../content/Unit02_MeasuringAdiposity.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measuring Adiposity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Unit03_CIFAR10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classification: CIFAR10</span></a>
+  <a href="../content/Unit03_GeneticData.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BCR-ABL Fusion</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Unit04_TinyDiffusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diffusion: Datasaurus Dozen</span></a>
+  <a href="../content/Unit04_Income.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Income Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/Unit05_RashomonQuartet.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Rashomon Quartet</span></a>
   </div>
 </li>
       </ul>
@@ -521,34 +400,14 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">scorcher</h1>
-<p class="subtitle lead">Blazing a trail for effortless model building with torch in R</p>
+<h1 class="title">Unit02_MNIST</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Stephen Salerno, PhD </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Fred Hutchinson Cancer Center
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Friday, May 15, 2026 | 11:45 am PDT</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -558,201 +417,10 @@ window.Quarto = {
 </header>
 
 
-<div class="landing-page">
-<div class="hero-grid">
-<div class="hero-diagram">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src=".\content/images/pbinference_gronsbell.PNG" class="img-fluid figure-img"></p>
-<figcaption>Source: <a href="https://arxiv.org/pdf/2411.19908">https://arxiv.org/pdf/2411.19908</a></figcaption>
-</figure>
-</div>
-</div>
-<section id="workshop-goals-and-objectives" class="level3 goals-card">
-<h3 class="anchored" data-anchor-id="workshop-goals-and-objectives">Workshop Goals and Objectives</h3>
-<p><strong>Learning Goals</strong>:</p>
-<ul>
-<li><strong>Understand</strong> limitations in using predicted data for inference.</li>
-<li><strong>Learn</strong> about methods that correct for bias and recover valid uncertainty estimates.</li>
-<li><strong>Gain</strong> practical skills using the <a href="https://github.com/ipd-tools/ipd"><code>ipd</code></a> R package.</li>
-</ul>
-<p><strong>Learning Objectives</strong>:</p>
-<ul>
-<li><strong>Explore</strong> data with AI/ML-predicted outcomes and diagnose bias/variance in predictions.</li>
-<li><strong>Apply</strong> <code>ipd::ipd()</code> to continuous and binary outcomes.</li>
-<li><strong>Interpret</strong> prediction-based (PB) inference outputs and visualize model results.</li>
-</ul>
-</section>
-</div>
-<section id="time-outline-105-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="time-outline-105-minutes">Time Outline (105 minutes)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Activity</th>
-<th>Time</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="content/slides.qmd">Overview</a></td>
-<td>30 m</td>
-</tr>
-<tr class="even">
-<td>Short Break</td>
-<td>5 m</td>
-</tr>
-<tr class="odd">
-<td><a href="./content/Unit00_GettingStarted.html">Unit 00: Getting Started</a></td>
-<td>30 m</td>
-</tr>
-<tr class="even">
-<td><a href="content/Unit01_AlphaFold.qmd">Unit 01: AlphaFold</a></td>
-<td>30 m</td>
-</tr>
-<tr class="odd">
-<td>Wrap-Up and Q&amp;A</td>
-<td>10 m</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="quick-start" class="level2 quickstart-block">
-<h2 class="anchored" data-anchor-id="quick-start">Quick Start</h2>
-<p>The companion website for this workshop is available at:</p>
-<p><a href="https://salernos.github.io/ipd-workshop">https://salernos.github.io/ipd-workshop</a></p>
-<p>To use the workshop image:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-e</span> PASSWORD=<span class="op">&lt;</span>your_chosen_password<span class="op">&gt;</span> -p 8787:8787 ghcr.io/salernos/scorcher-workshop:latest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Once running, open <code>http://localhost:8787/</code> and login with username = <code>rstudio</code>, password = <code>&lt;your_chosen_password&gt;</code></p>
-<p>Then <a href="./content/Unit00_GettingStarted.html">begin</a>!</p>
-</section>
-<section id="workshop-overview" class="level2">
-<h2 class="anchored" data-anchor-id="workshop-overview">Workshop Overview</h2>
-<p>In this workshop, we explore the consequences of conducting inference on predicted data across several applications and present a suite of prediction-based (PB) inference methods that adjust for prediction-related uncertainty to improve inference validity and efficiency. We also introduce <a href="https://github.com/ipd-tools/ipd"><code>ipd</code></a>, a user-friendly <code>R</code> package that implements the PB inference methods through a unified interface. The package supports modular integration into existing workflows and includes <a href="https://broom.tidymodels.org/index.html"><code>tidy</code></a> methods for model inspection and diagnostics.</p>
-</section>
-<section id="modules" class="level2">
-<h2 class="anchored" data-anchor-id="modules">Modules</h2>
-<p>This workshop covers two modules, each illustrated with the <a href="https://github.com/ipd-tools/ipd"><code>ipd</code></a> package:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div id="listing-core_units" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1777986605333" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./content/Unit00_GettingStarted.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unit00_GettingStarted
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1777986619953" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./content/Unit01_PalmerPenguins.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unit01_PalmerPenguins
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="supplemental-modules" class="level2">
-<h2 class="anchored" data-anchor-id="supplemental-modules">Supplemental Modules</h2>
-<p>We have also included some supplemental modules for you to explore on your own:</p>
-<div id="listing-supplemental_units" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1777986635773" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./content/Unit02_MNIST.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unit02_MNIST
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1777986650341" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./content/Unit03_CIFAR10.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unit03_CIFAR10
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1777986663999" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./content/Unit04_TinyDiffusion.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unit04_TinyDiffusion
-</h5>
-<div class="card-text listing-description delink">
-
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="participation" class="level2">
-<h2 class="anchored" data-anchor-id="participation">Participation</h2>
-<p>This workshop uses a blended format of <strong>instruction</strong> and <strong>hands-on coding exercises</strong>. Participants should:</p>
-<ul>
-<li>Follow along in the virtual RStudio environment (see below).</li>
-<li>Attempt to complete brief exercises or run the solution code snippets in real time.</li>
-<li>Engage in Q&amp;A at module boundaries to troubleshoot and discuss concepts.</li>
-</ul>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<ul>
-<li>A computer with internet access.</li>
-<li>Familiarity with base <code>R</code> and <code>tidyverse</code> syntax (e.g., <code>dplyr</code>, <code>broom</code>).</li>
-<li>Basic understanding of predictive (e.g., <code>randomForest</code>) and regression modeling (e.g., <code>lm</code>, <code>glm</code>).</li>
-<li>Optional: Exposure to Bioconductor’s <code>ExpressionSet</code>, <code>AnnotationDbi</code>, and <code>MLInterfaces</code> is helpful for one of the supplemental modules.</li>
-</ul>
-</section>
-<section id="contributors" class="level2">
-<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
-<p><strong>Presenters:</strong> Jesse Gronsbell <a href="mailto:j.gronsbell@utoronto.ca">✉︎</a>, Jianhui Gao <a href="mailto:jianhui.gao@mail.utoronto.ca">✉︎</a>, Stephen Salerno <a href="mailto:ssalerno@fredhutch.org">✉︎</a></p>
-<p><strong>All Contributors (Alphabetical Order):</strong> Awan Afiaz <a href="mailto:aafiaz@uw.edu">✉︎</a>, David Cheng <a href="mailto:dcheng@mgh.harvard.edu">✉︎</a>, Jianhui Gao <a href="mailto:jianhui.gao@mail.utoronto.ca">✉︎</a>, Jesse Gronsbell <a href="mailto:j.gronsbell@utoronto.ca">✉︎</a>, Kentaro Hoffman <a href="mailto:khoffm3@uw.edu">✉︎</a>, Jeff Leek <a href="mailto:jtleek@fredhutch.org">✉︎</a>, Qiongshi Lu <a href="mailto:qlu@biostat.wisc.edu">✉︎</a>, Tyler McCormick <a href="mailto:tylermc@uw.edu">✉︎</a>, Jiacheng Miao <a href="mailto:jmiao24@wisc.edu">✉︎</a>, Anna Neufeld <a href="mailto:acn2@williams.edu">✉︎</a>, Stephen Salerno <a href="mailto:ssalerno@fredhutch.org">✉︎</a></p>
-</section>
-</div>
 
 
 
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Module card cover images were generated by GPT-5.5.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const selector =
@@ -1191,15 +859,6 @@ Unit04_TinyDiffusion
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./content/setup.qmd" class="pagination-link" aria-label="Setup &amp; Prerequisites">
-        <span class="nav-page-text">Setup &amp; Prerequisites</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1208,7 +867,7 @@ Unit04_TinyDiffusion
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/salernos/scorcher-workshop/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/salernos/scorcher-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/salernos/scorcher-workshop/edit/main/content/Unit02_MNIST.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/salernos/scorcher-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Proudly built with <a href="https://www.ottrproject.org/">OTTR</a> and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
